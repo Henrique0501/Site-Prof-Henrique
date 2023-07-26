@@ -1,0 +1,652 @@
+h1{
+font-family: var(--cabin);
+font-size: 50px;
+}
+
+.quadro{
+padding: 0% 0% 0% 5%;
+height: 750px;
+width: 100%;
+background-position: right bottom;
+background-size: cover;
+background-repeat: no-repeat;
+background-image: url('../imagens/fundo.png');
+position: relative;
+}
+
+
+.cumprimento{
+padding-top: 10%;
+display: inline-block;
+width: 50%;
+color: white;
+}
+
+.escrever{
+text-align: center;
+margin: 20px 0;
+color: var(--verde-moderno);
+font-size: 75px;
+z-index: 1000;
+height: 100px;
+}
+
+.sim-estou{
+z-index: 1000;
+text-decoration: inherit;
+}
+
+.botao{
+animation: tremer 4s infinite;
+transition: .5s;
+border-radius: 15px;
+color: black;
+background-color: white;
+box-shadow: 3px 3px 10px var(--verde-moderno);
+width: 50%;
+text-align: center;
+margin: 0 auto;
+z-index: 1000;
+cursor: pointer;
+padding: 5px 0;
+font-weight: bold;
+}
+
+.henrique{
+vertical-align: top;
+margin-top: 30px;
+width: 45%
+}
+
+@keyframes tremer{
+    0%{
+        transform: rotate(0);
+    }
+    40%{
+        transform: rotate(0deg);
+    }
+    42%{
+        transform: rotate(10deg);
+    }
+    44%{
+        transform: rotate(-10deg);
+    }
+    46%{
+        transform: rotate(10deg);
+    }
+    48%{
+        transform: rotate(-10deg);
+    }
+    50%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+.lampada-e-cabo{
+width: 50px;
+z-index: 900;
+pointer-events: none;
+}
+
+.container-lampada{
+width: 50px;
+position: absolute;
+top: -400px;
+right: 50%;
+transition: 1.8s;
+transition-timing-function: ease-in-out;
+filter: drop-shadow(50px 50px 12px black);
+pointer-events: none;
+}
+
+.lampada-embaixo{
+width: 50px;
+position: absolute;
+top: -50px;
+right: 50%;
+transition: 1.8s;
+transition-timing-function: ease-in-out;
+filter: drop-shadow(50px 50px 30px black);
+text-align: center;
+pointer-events: none;
+}
+
+.lampada-embaixo::after{
+content: '';
+display: block;
+width: 500px;
+height: 500px;
+background: radial-gradient(circle, rgba(255,248,0,.3) 0%, rgba(2,4,19,0) 50%);
+position: relative;
+top: -280px;
+right: 210px;
+z-index: -1;
+pointer-events: none;
+}
+
+.container-video{
+width: 100%;
+padding-top: 200px;
+background-image: url('../imagens/nave-escura.png');
+background-repeat: no-repeat;
+background-size: 500px;
+background-position: -100px 0px;
+}
+
+.convite{
+width: 40%;
+
+}
+
+.row{
+display: flex;
+justify-content: space-evenly;
+}
+
+.convite div{
+width: 100%;
+padding-top: 30px;
+}
+
+.botao-agendar{
+text-decoration: none;
+color: white;
+background: black;
+height: 30px;
+width: 50%;
+text-align: center;
+border-radius: 35px;
+padding: 20px 90px;
+box-shadow: 5px 5px 15px var(--verde-moderno);
+font-size: 20px;
+}
+
+.botao-agendar:hover{
+color: var(--verde-moderno);
+}
+
+.paper-video{
+box-shadow: 15px 15px 25px -10px rgba(0,0,0,.3);
+padding: 15px;
+width: 700px;
+background: white;
+}
+
+.paper-video iframe{
+width: 100%;
+}
+
+.beneficio{
+width: 25%;
+margin-top: 250px;
+}
+
+.beneficio i{
+font-size: 40px;
+}
+.beneficio h2{
+padding: 5px 0;
+}
+
+.wave{
+height: 700px;
+}
+
+.container-disciplinas{
+width: 100%;
+height: 660px;
+background: linear-gradient(32deg, black 0%, var(--azul-escuro) 15%, black 80%);
+position: relative;
+overflow: hidden;
+border-bottom: 1px solid #18ef23;
+box-shadow: 0px 11px 19px -10px var(--verde-neon);
+}
+
+
+.container-carousel {
+width: 320px;
+transform-origin: 50% 50%;
+perspective: 1000px;
+position: absolute;
+left: 60px;
+top: -40px;
+filter: drop-shadow(40px 10px 30px black);
+}
+
+.carousel-3d {
+width: 100%;
+transform-style: preserve-3d;
+transform-origin: 50% 50%;
+animation: rotate360 10s infinite forwards linear;
+position: absolute;
+top: 150px;
+transform: rotateY(255deg);
+transition: 1s;
+z-index: 3;
+}
+
+.button-pointer{
+background-color: rgba(0,0,0,0);
+border: none;
+color: var(--verde-moderno);
+position: absolute;
+top: 300px;
+z-index: 10000;
+transition: .5s;
+}
+
+.button-pointer:hover{
+transition: .5s;
+}
+
+.back{
+left: 30px;
+}
+
+.go{
+left: 430px;
+}
+
+.disciplina{
+  width: 300px;
+  height: 300px;
+  border-radius: 15px;
+  position: absolute;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: solid 4px var(--verde-moderno);
+  transition: .5s;
+}
+
+.disciplina img{
+width: 30%;
+}
+
+.matematica{
+color: var(--vermelho-matematica);
+transform: rotateY(120deg) translateZ(86px);
+background: var(--azul-marinho);
+}
+
+.fisica{
+color: var(--azul-fisica);
+transform: rotateY(0deg) translateZ(86px);
+background-color: var(--azul-marinho);
+}
+
+.quimica{
+color: var(--verde-quimica);
+transform: rotateY(240deg) translateZ(86px);
+background: var(--azul-marinho);
+}
+
+.container-gifs{
+width: 800px;
+height: 800px;
+transform-origin: 50% 50%;
+position: absolute;
+bottom: -400px;
+right: -400px;
+transition: 1s;
+z-index: 1;
+transform: rotate(360deg);
+}
+
+.math{
+width: 400px;
+height: 400px;
+position: absolute;
+top: 0;
+left: 0;
+}
+
+.buraco-negro{
+position: absolute;
+top: 50%;;
+left: 0%;
+width: 400px;
+height: 400px;
+z-index:-1;
+}
+
+.frasco{
+position: absolute;
+top: 50%;;
+left: 50%;
+width: 400px;
+height: 400px;
+z-index:-1;
+transform: rotate(180deg);
+}
+
+.container-title{
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.nome-disciplina{
+width: 300px;
+text-align: center;
+color: var(--vermelho-matematica);
+transition: 1s;
+}
+
+.text {
+position: absolute;
+top: 300px;
+left: 500px;
+width: 30%;
+color: white;
+font-size: 25px;
+}
+
+.text p{
+text-align: justify;
+}
+
+.text ul{
+list-style-image: url("../imagens/check_1.png");
+}
+
+.container-pacotes{
+width: 100%;
+background-image: url('../imagens/telescopio-escuro.png');
+background-repeat: no-repeat;
+background-size: 40%;
+background-position: 800px 50px;
+}
+
+.titulo-custo{
+width: 50%;
+
+display: flex;
+align-items: center;
+margin-left: 60px;
+font-size: 90px;
+}
+
+.container-aula1{
+width: 70%;
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+margin-bottom: 50px;
+}
+
+.container-aula1 img{
+width: 20%;
+}
+
+
+.container-pacotes ul{
+list-style-image: url('../imagens/circulo-azul_1.png');
+line-height: 32px;
+}
+
+.pacotes{
+width: 100%;
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+}
+
+.pacote{
+width: 75%;
+height: 500px;
+background: linear-gradient(40deg, black 0%, var(--azul-escuro) 27%, var(--azul-escuro) 70%, black 100%);
+border-radius: 30px;
+margin-bottom: 70px;
+}
+
+.pacote h1{
+width: 45%;
+margin: 15px;
+color: var(--verde-moderno);
+}
+
+.alinhar{
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: space-evenly;
+}
+
+.label-select{
+margin: 15px;
+}
+
+.label-select p{
+color: white;
+margin-bottom: 1px;
+}
+
+.pacote select{
+height: 40px;
+width: 300px;
+border-radius: 20px;
+background-color: var(--verde-moderno);
+border: none;
+}
+
+.pacote select:focus{
+outline: none;
+}
+
+.painel-precos{
+color: white;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+#imagem-alunos{
+height: 50%;
+}
+
+.painel-precos table td{
+vertical-align: bottom;
+}
+
+table td{
+padding-bottom: 20px;
+}
+
+.letra-grande{
+font-size: 50px;
+line-height: 50px;
+}
+
+.letra-media{
+font-size: 25px;
+line-height: 25px;
+}
+
+.coluna1{
+width: 150px;
+}
+
+
+
+@media screen and (max-width: 950px){
+
+    .quadro{
+    width: 100%;
+    background-image: url('../imagens/fundo-cel.png');
+    background-position: right bottom;
+    position: relative;
+    }
+
+    .cumprimento h1:not(.escrever){
+    font-size: 35px;
+    }
+
+    .escrever{
+    font-size: 50px;
+    }
+
+    .convite{
+    width: 90%;
+    padding-top: 200px;
+    }
+
+    .convite div{
+    text-align: center;
+    }
+
+    .botao-agendar{
+    padding: 15px 50px;
+    width: 100%;
+    margin: 0 auto;
+    }
+
+    .row{
+    flex-direction: column;
+    }
+
+    .row div{
+    width: 90%;
+    margin: 5%;
+    }
+
+    .container-disciplinas{
+    height: 700px;
+    }
+
+    .container-carousel {
+    width: 160px;
+    }
+
+    .disciplina{
+    height: 150px;
+    width: 150px;
+    }
+
+    .matematica{
+    transform: rotateY(120deg) translateZ(43px);
+    }
+
+   .fisica{
+    transform: rotateY(0deg) translateZ(43px);
+    }
+
+    .quimica{
+    transform: rotateY(240deg) translateZ(43px);
+    }
+
+    .button-pointer{
+    top: 200px;
+    }
+
+    .go{
+    left: 250px;
+    }
+
+    .text{
+    left: 0px;
+    width: 100%;
+    padding: 5px;
+    font-size: 20px;
+    }
+
+    .container-gifs{
+    width: 500px;
+    height: 500px;
+    bottom: -250px;
+    right: -250px;
+    }
+
+    .math, .buraco-negro, .frasco{
+    width: 250px;
+    height: 250px;
+    }
+
+    .titulo-custo{
+    width: 100%;
+    padding: 25px;
+    margin-left: 0px;
+    margin-top: 0px;
+    font-size: 50px;
+    }
+
+    .container-aula1{
+    flex-direction: column;
+    width: 100%;
+    padding: 0 20px;;
+    }
+
+    .container-aula1 img{
+    width: 60%;
+    }
+
+    .alinhar{
+    flex-direction: column;
+    }
+
+    .pacote{
+    width: 90%;
+    height: 600px;
+    }
+
+    .pacote h1{
+    font-size: 30px;
+    width: 100%;
+    }
+
+    .pacote select{
+    width: 90%;
+    }
+
+    #imagem-alunos{
+    width: 25%;
+    }
+
+    .letra-grande{
+    font-size: 40px;
+    line-height: 40px;
+    }
+}
+
+@media screen and (max-width: 700px){
+
+    .quadro{
+    padding: 0 5%;
+    min-height: 105vh;
+    }
+
+    .cumprimento{
+    padding-top: 100px;
+    display: block;
+    width: 100%;
+    }
+
+    .cumprimento h1:not(.escrever){
+    font-size: 25px;
+    }
+
+    .escrever{
+    font-size: 45px;
+    height: 70px;
+    }
+
+    .henrique{
+    width: 90%;
+    margin-left: 8%;
+    margin-top: 7vh;
+    }
+
+    .container-lampada{
+    right: 20%;
+    }
+
+    .lampada-embaixo{
+    right: 20%;
+    }
+
+}

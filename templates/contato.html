@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block import %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/contato.css') }}">
+{% endblock %}
+
+{% block content %}
+    <div id="topo">
+        <img src="{{ url_for('static', filename='imagens/menino.png') }}">
+        <h1>O futuro começa agora</h1>
+    </div>
+    <div id="div1">
+        <h1>Entre em contato agora mesmo!</h1>
+        <div>
+            <a>
+                <div id="bt-contato">
+                    <p>Entrar em contato</p>
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+            </a>
+            <a href="/#pacotes">
+                <div id="bt-pacotes">
+                    <p>Pacotes disponíveis</p>
+                    <i class="fa-solid fa-file-invoice-dollar"></i>
+                </div>
+            </a>
+        </div>
+    </div>
+
+{% endblock %}

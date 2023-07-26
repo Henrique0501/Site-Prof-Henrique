@@ -1,0 +1,93 @@
+h1{
+font-family: 'Anton', sans-serif;
+font-size: 7vw;
+}
+
+#topo{
+height: 400px;
+width: 100%;
+background-position: right bottom;
+background-size: cover;
+background-repeat: no-repeat;
+background-image: url('../imagens/wave.png');
+}
+
+#topo img{
+width: 25%;
+margin: 100px 0 0 10%;
+display: inline-block;
+vertical-align: top;
+}
+
+#topo h1{
+display: inline-block;
+width: 50%;
+margin: 150px 0 0 10%;
+color: var(--verde-moderno);
+text-shadow: 4px 4px 4px rgba(0,0,0,.4) ;
+}
+
+#div1{
+display: flex;
+justify-content: space-around;
+align-items: center;
+margin: 15%;
+}
+
+#div1 h1{
+width: 50%;
+background: -webkit-linear-gradient(var(--azul-escuro), var(--azul-claro));
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+#div1 a div p{
+margin-bottom: 0;
+}
+
+#div1 a{
+text-decoration: inherit;
+}
+
+#div1 a div{
+display: flex;
+justify-content: space-around;
+align-items: center;
+width: 25vw;
+border-radius: 10px;
+padding: 15px 15%;
+color: white;
+cursor: pointer;
+}
+
+#bt-contato{
+background-color: var(--verde-neon);
+margin-bottom: 10px;
+}
+
+#bt-pacotes{
+background: linear-gradient(32deg, var(--azul-escuro) 0%, var(--azul-claro) 15%, var(--azul-escuro) 80%);
+}
+
+@media screen and (max-width: 700px){
+    #topo h1{
+    font-size: 10vw;
+    width: 40%;
+    }
+
+    #topo img{
+    width: 35%;
+    }
+
+    #div1{
+    margin: 0 10% 20% 0;
+    }
+
+    #div1 h1{
+    width: 40%;
+    }
+
+    #div1 a div{
+    width: 100%;
+    }
+}

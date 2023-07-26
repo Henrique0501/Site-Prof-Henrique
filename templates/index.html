@@ -1,0 +1,194 @@
+{% extends "base.html" %}
+
+{% block import %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/index.css') }}">
+{% endblock %}
+
+{% block content %}
+    <section class="quadro">
+        <div class="cumprimento">
+
+            <h1>Olá</h1>
+            <h1>Está preparado(a) para aprender de uma forma</h1>
+            <h1 class="escrever"></h1>
+
+            <a class="sim-estou" href="/contato">
+                <div class="botao">Sim, estou!!!</div>
+            </a>
+        </div>
+
+        <img class="henrique" src="{{ url_for('static', filename='imagens/henrique.png') }}">
+
+        <div class="container-lampada">
+            <img src="{{ url_for('static', filename='imagens/lampada-apagada.png') }}" class="lampada-e-cabo">
+        </div>
+
+    </section>
+
+    <section class="container-video">
+        <div class="row">
+            <div class="paper-video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/1EFUXRSNsBU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <div class="convite">
+                <h1>Aulas preparadas especialmente para você.</h1>
+
+                <div>
+                    <a href="/contato" class="botao-agendar">
+                        Agende uma aula
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="beneficio">
+                <i class="fa-solid fa-book"></i>
+                <h2>Aulas presenciais e online</h2>
+                <p>Reforço escolar e preparação para vestibulares e concursos.</p>
+            </div>
+
+            <div class="beneficio">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <h2>Resolução de provas passadas</h2>
+                <p>Já pensou em ter as questões de provas passadas totalmente resolvidas e comentadas?</p>
+            </div>
+
+            <div class="beneficio">
+                <i class="fa-solid fa-person-chalkboard"></i>
+                <h2>Mentoria para vestibulandos</h2>
+                <p>Vamos impulsionar seus estudos e te ajudar a se organizar.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="container-disciplinas">
+
+        <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#ffffff" fill-opacity="1" d="M0,64L1440,224L1440,0L0,0Z"></path>
+        </svg>
+
+        <div class="container-carousel">
+            <div class="carousel-3d">
+                <div class="disciplina matematica">
+                    <img src="{{ url_for('static', filename='imagens/pi.svg') }}"/>
+                    <h2>Matemática</h2>
+                </div>
+
+                <div class="disciplina fisica">
+                    <img src="{{ url_for('static', filename='imagens/atomo.svg') }}"/>
+                    <h2>Física</h2>
+                </div>
+
+                <div class="disciplina quimica">
+                    <img src="{{ url_for('static', filename='imagens/frascos.svg') }}"/>
+                    <h2>Química</h2>
+                </div>
+
+            </div>
+        </div>
+
+        <button class="button-pointer back"> <i class="fa-solid fa-angles-left"></i> </button>
+        <button class="button-pointer go"> <i class="fa-solid fa-angles-right"></i> </button>
+
+        <div class="text">
+            <p class="descricao-disciplina"> Aulas de matemática desde as operações básicas até os conteúdos mais avançados, incluindo as disciplinas de Cálculo do Ensino Superior. </p>
+            <ul>
+               <li>Nível Fundamental</li>
+               <li>Nível Médio</li>
+               <li>Nível Superior</li>
+            </ul>
+        </div>
+
+
+        <div class="container-gifs">
+            <lottie-player class="buraco-negro" src="{{ url_for('static', filename='videos/buraco-negro.json') }}" background="transparent"  speed=".3"  loop autoplay></lottie-player>
+            <lottie-player class="math" src="{{ url_for('static', filename='videos/math.json') }}" background="transparent"  speed=".3"  loop autoplay></lottie-player>
+            <lottie-player class="frasco" src="{{ url_for('static', filename='videos/frasco.json') }}" background="transparent"  speed=".3"  loop autoplay></lottie-player>
+        </div>
+
+    </section>
+
+    <section class="container-pacotes">
+
+        <h1 class="titulo-custo">Legal! Mas quanto custa?</h1>
+
+        <div class="container-aula1">
+            <img src="{{ url_for('static', filename='imagens/first-class_1.png') }}">
+            <ul>
+                <li>Quanto <b>mais aulas</b> houver no pacote, <b>mais barato</b> fica a hora-aula;</li>
+                <li>Quanto <b>mais alunos</b> na mesma aula, <b>mais barato</b> fica para cada um;</li>
+                <li>Para <b>aulas presencias</b> também será cobrado o valor referente ao <b>deslocamento</b>.</li>
+            </ul>
+        </div>
+
+        <div class="pacotes" id="pacotes">
+            <div class="pacote">
+                <h1>Faça um orçamento</h1>
+
+                <div class="alinhar">
+                    <div class="controles">
+                        <div class="label-select">
+                            <p>Quantidade de alunos:</p>
+                            <select id="select-alunos">
+                                <option value="1">1 aluno</option>
+                                <option value="2">2 alunos</option>
+                                <option value="3">3 alunos</option>
+                            </select>
+                        </div>
+
+                        <div class="label-select">
+                            <p>Quantidade de aulas no pacote:</p>
+                            <select id="select-aulas">
+                                <option value="1">1 aula</option>
+                                <option value="2">2 aulas</option>
+                                <option value="5">5 aulas</option>
+                                <option value="10">10 aulas</option>
+                                <option value="20">20 aulas</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="painel-precos">
+                        <img id="imagem-alunos" src="{{ url_for('static', filename='imagens/1aluno_1.png') }}">
+                        <table>
+                            <tr>
+                                <td class="coluna1" id="label-preco-por-aluno-hora">Valor da hora-aula:</td>
+                                <td class="preco-por-aluno-hora letra-grande">R$ 45,00</td>
+                            </tr>
+                        </table>
+                        <table>
+                            <tr>
+                                <td class="coluna1" style="line-height: 15px;">Valor total<br>(para cada aluno):</td>
+                                <td class="preco-por-aluno letra-media">R$ 45,00</td>
+                            </tr>
+                        </table>
+                        <table>
+                            <tr>
+                                <td class="coluna1" style="line-height: 15px;">Valor total a ser pago ao professor:</td>
+                                <td class="preco-total letra-media">R$ 45,00</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <script src="{{ url_for('static', filename='styles/lampadas.js') }}"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        var typed = new Typed(".escrever", {
+        strings: ["+Rápida?", "+Fácil?", "+Descontraída?"],
+        typeSpeed: 70,
+        backSpeed: 60,
+        loop: true,
+        showCursor: false,
+        })
+    </script>
+
+{% endblock %}
