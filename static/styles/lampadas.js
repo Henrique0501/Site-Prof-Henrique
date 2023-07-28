@@ -22,6 +22,9 @@ var pointer = document.querySelectorAll('.button-pointer');
 var carouselTD = document.querySelector('.carousel-3d');
 var containerGifs = document.querySelector('.container-gifs');
 var descricaoDisciplina = document.querySelector('.descricao-disciplina');
+var fund = document.querySelector('#fund');
+var med = document.querySelector('#med');
+var sup = document.querySelector('#sup');
 let countTD = 0;
 let count = 4;
 
@@ -61,12 +64,21 @@ for (let ind = 0; ind < 2; ind++){
 
         if (countTD%3 == 0){
         descricaoDisciplina.innerHTML = "Aulas de matemática desde as operações básicas até os conteúdos mais avançados, incluindo as disciplinas de Cálculo do Ensino Superior.";
+        fund.style.display = "list-item";
+        med.style.display = "list-item";
+        sup.style.display = "list-item";
         };
         if ((countTD%3 == 1) || (countTD%3 == -2)) {
         descricaoDisciplina.innerHTML = "Entenda física de uma maneira simples e completa!!!";
+        fund.style.display = "none";
+        med.style.display = "list-item";
+        sup.style.display = "list-item";
         };
         if ((countTD%3 == 2) || (countTD%3 == -1)){
         descricaoDisciplina.innerHTML = "Marque uma aula e veja quão fácil a química é!!! ";
+        fund.style.display = "none";
+        med.style.display = "list-item";
+        sup.style.display = "none";
         };
     };
 };
@@ -105,13 +117,15 @@ var aulas = selectAulas.options[selectAulas.selectedIndex].value;
 var precoTotal = document.querySelector('.preco-total');
 var precoPorAlunoHora = document.querySelector('.preco-por-aluno-hora');
 var precoPorAluno = document.querySelector('.preco-por-aluno');
+var line1 = document.querySelector('#line1');
+var line2 = document.querySelector('#line2');
+var line3 = document.querySelector('#line3');
 
 const dicPrecos = {"Alunos": [1,2,3],
-                1: [45,70,90],
-                2: [80,128,150],
-                5: [200, 300, 330],
-                10: [390, 560, 630],
-                20: [740, 1000, 1140]
+                1: [50,80,105],
+                2: [90,152,198],
+                4: [172, 264, 360],
+                8: [336, 512, 696]
                 }
 
 selectAlunos.onchange = function(){
@@ -127,12 +141,15 @@ selectAlunos.onchange = function(){
     };
     if(alunos==1){
         imagemAlunos.src = 'static/imagens/1aluno_1.png';
+        line2.style.display = "none";
     };
     if(alunos==2){
         imagemAlunos.src = 'static/imagens/2alunos_1.png';
+        line2.style.display = "table-row";
     };
     if(alunos==3){
         imagemAlunos.src = 'static/imagens/3alunos_1.png';
+        line2.style.display = "table-row";
     };
     };
 
@@ -147,13 +164,16 @@ selectAulas.onchange = function(){
     } else {
         labelALunoHora.innerHTML = 'Valor da hora-aula:';
     };
-        if(alunos==1){
+    if(alunos==1){
         imagemAlunos.src = 'static/imagens/1aluno_1.png';
+        line2.style.display = "none";
     };
     if(alunos==2){
         imagemAlunos.src = 'static/imagens/2alunos_1.png';
+        line2.style.display = "table-row";
     };
     if(alunos==3){
         imagemAlunos.src = 'static/imagens/3alunos_1.png';
+        line2.style.display = "table-row";
     };
     };

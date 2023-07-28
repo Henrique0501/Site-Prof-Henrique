@@ -446,6 +446,10 @@ flex-direction: column;
 align-items: center;
 }
 
+#line2{
+display: none;
+}
+
 #imagem-alunos{
 height: 50%;
 }
