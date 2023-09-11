@@ -122,10 +122,10 @@ var line2 = document.querySelector('#line2');
 var line3 = document.querySelector('#line3');
 
 const dicPrecos = {"Alunos": [1,2,3],
-                1: [50,80,105],
-                2: [90,152,198],
-                4: [172, 264, 360],
-                8: [336, 512, 696]
+                1: [55,90,105],
+                2: [96,160,198],
+                4: [180, 280, 360],
+                8: [344, 512, 696]
                 }
 
 selectAlunos.onchange = function(){
