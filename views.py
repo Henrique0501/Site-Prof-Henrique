@@ -10,3 +10,7 @@ def index():
 @app.route('/contato')
 def contato():
     return render_template('contato.html')
+
+@app.route('/creditos')
+def creditos():
+    return render_template('creditos.html')

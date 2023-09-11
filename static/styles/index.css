@@ -173,9 +173,10 @@ box-shadow: 15px 15px 25px -10px rgba(0,0,0,.3);
 padding: 15px;
 width: 700px;
 background: white;
+background-color: white;
 }
 
-.paper-video iframe{
+.paper-video img{
 width: 100%;
 }
 
@@ -193,6 +194,8 @@ padding: 5px 0;
 
 .wave{
 height: 700px;
+position: absolute;
+top: 0px;
 }
 
 .container-disciplinas{
