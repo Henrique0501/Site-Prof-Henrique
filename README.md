@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <img src="http://img.shields.io/static/v1?label=STATUS&message=DISPONIVEL%20A%20TITULO%20DE%20PORTIFOLIO&color=GREEN&style=for-the-badge">
+  <img src="http://img.shields.io/static/v1?label=STATUS&message=DISPONIVEL%20A%20TITULO%20DE%20PORTFOLIO&color=GREEN&style=for-the-badge">
 </p>
 
 <p align="center">
